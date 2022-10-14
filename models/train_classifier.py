@@ -99,8 +99,8 @@ def build_model():
 def evaluate_model(model, X_test, Y_test, category_names):
     y_pred = model.predict(X_test)
     #converting to a dataframe
-    y_pred = pd.DataFrame (y_pred, columns = y_test.columns)
-    reuslts = (classification_report(y_test.values, y_pred, target_names=y_test.columns.values))
+    y_pred = pd.DataFrame (y_pred, columns = Y_test.columns)
+    reuslts = (classification_report(y_test.values, y_pred, target_names=Y_test.columns.values))
     print (reuslts)
 
 
