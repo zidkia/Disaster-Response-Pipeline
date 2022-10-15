@@ -45,6 +45,11 @@ def index():
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
+    Y_plot = df.iloc[:,4:]
+    Y_precentage = Y.sum() / Y.shape[0]
+    
+
+    
     graphs = [
         {
             'data': [
@@ -58,6 +63,23 @@ def index():
                 'title': 'Distribution of Message Genres',
                 'yaxis': {
                     'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Genre"
+                }
+            }
+            ,
+            'data': [
+                Bar(
+                    x=Y_precentage.index,
+                    y=Y_precentage
+                )
+            ],
+
+            'layout': {
+                'title': 'Percentages by Category',
+                'yaxis': {
+                    'title': "Percentage"
                 },
                 'xaxis': {
                     'title': "Genre"
