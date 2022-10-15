@@ -45,7 +45,7 @@ def index():
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
-    Y_plot = df.iloc[:,4:]
+    Y_plot = df  #.iloc[:,4:]
     Y_precentage = Y.sum() / Y.shape[0]
     
 
